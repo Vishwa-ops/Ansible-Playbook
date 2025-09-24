@@ -17,3 +17,6 @@ Playbooks Included:
 12) Downloading_file_internet.yml
 13) enabled_service_firewall.yml
 
+How to run the playbook:
+ansible-playbook { playbook name }
+example: ansible-playbook installing_packages.yml
