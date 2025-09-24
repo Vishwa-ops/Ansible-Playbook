@@ -1,0 +1,15 @@
+---
+- name: Creating file and folder on remote
+  hosts: 192.168.1.30
+
+  tasks:
+  - name: Creating file on remote
+    file:
+      path: /tmp/myfile.txt
+      state: absent
+      mode: u=r,g=rwx,o=r
+
+  - name: Creating folder on remote
+    file:
+      path: /tmp/myfolder
+      state: directory

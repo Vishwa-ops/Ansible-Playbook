@@ -1,0 +1,11 @@
+---
+- name: Password setting for new users 
+  hosts: all
+  become: true
+
+  tasks: 
+  - name:
+    user:
+      name: nick
+      update_password: always
+      password: "{{'abcd123' | password_hash('sha512')}}"

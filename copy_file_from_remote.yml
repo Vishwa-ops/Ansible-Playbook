@@ -1,0 +1,13 @@
+---
+- name: Copying file to remote 
+  hosts: 192.168.1.30
+  become: true
+
+  tasks:
+  - name: Copy file
+    copy:
+      src: /home/vishwa/myfile.txt
+      dest: /home/vishwa
+      owner: root
+      mode: ogo=rw
+      backup: true

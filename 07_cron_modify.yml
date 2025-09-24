@@ -1,0 +1,10 @@
+---
+- name: Cron modify
+  hosts: 192.168.1.30
+
+  tasks:
+  - name: Remove job
+    cron:
+      name: Run Test Script
+      state: absent
+      user: vishwa

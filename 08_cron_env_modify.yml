@@ -1,0 +1,13 @@
+---
+- name: Adding the environment variables
+  hosts: 192.168.1.30
+
+  tasks:
+  - name: Add env
+    cron:
+      name: VARR
+      env: yes
+      user: vishwa
+      job: /home/vishwa/script/script.sh
+      insertbefore: PATH
+      state: absent

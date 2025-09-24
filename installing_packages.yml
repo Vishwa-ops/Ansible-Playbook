@@ -1,0 +1,16 @@
+---
+- name: installing packages
+  hosts: 192.168.1.30
+  become: yes
+
+  tasks:
+  - name: installing nginx
+    apt:
+      name: nginx
+      state: present
+  - name: starting services
+    service:
+      name: nginx
+      state: started
+      enabled: yes
+

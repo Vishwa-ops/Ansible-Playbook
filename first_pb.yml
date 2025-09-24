@@ -1,0 +1,9 @@
+---
+- name: This is first ansible file 
+  hosts: all
+
+  tasks:
+  - name: Testing the connectivity
+    ping: 
+  - name: "Print output"
+    debug: msg="Alright!!"

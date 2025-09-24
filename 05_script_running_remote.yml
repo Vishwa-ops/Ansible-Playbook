@@ -1,0 +1,10 @@
+---
+- name: Script run on remote
+  hosts: 192.168.1.30
+
+  tasks:
+  - name: Run script
+    shell: /home/vishwa/script/script.sh >> test.log
+    args:
+      chdir: /home/vishwa/script/
+      creates: test.log

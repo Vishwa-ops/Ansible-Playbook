@@ -1,0 +1,14 @@
+---
+- name: Creating user, group and deleting
+  hosts: 192.168.1.30
+  become: true
+
+  tasks:
+  - name: creating user
+    user:
+      name: nick
+      comment: Adding new user for QA
+      shell: /bin/bash
+      groups: QA, nick
+      state: absent
+      remove: yes

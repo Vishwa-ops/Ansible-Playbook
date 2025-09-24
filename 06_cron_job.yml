@@ -1,0 +1,15 @@
+---
+- name: Run a cron job on remote
+  hosts: 192.168.1.30
+
+  tasks:
+  - name: Cron job
+    cron:
+      name: Run Test Script
+      minute: 30
+      hour: 18
+      day: 15
+      month: "*"
+      weekday: "*"
+      user: vishwa
+      job: /home/vishwa/script/script.sh

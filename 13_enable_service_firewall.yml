@@ -1,0 +1,16 @@
+---
+- name: Enable firewall service
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Enabled firewall
+      firewalld:
+        port: 80/tcp
+        permanent: true
+        state: enabled
+
+    - name: Reloading firewall
+      service:
+        name: firewalld
+        state: restarted
