@@ -19,4 +19,5 @@ Playbooks Included:
 
 How to run the playbook:
 ansible-playbook { playbook name }
+
 example: ansible-playbook installing_packages.yml
